@@ -50,14 +50,14 @@ function App() {
         name="add-element"
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}
-        title="Новое место"
+        title="новое фото"
         buttonTitle="Создать"
       >
         <input
           required
           className="popup__input"
           type="text"
-          placeholder="Название"
+          placeholder="название"
           id="element-name"
           minLength="2"
           maxLength="30"
@@ -68,7 +68,7 @@ function App() {
           required
           className="popup__input"
           type="url"
-          placeholder="Ссылка на картинку"
+          placeholder="ссылка на фото"
           id="element-link"
           name="link"
         />
@@ -79,14 +79,14 @@ function App() {
         name="edit-profile"
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
-        title="Редактировать профиль"
+        title="редактировать"
         buttonTitle="Сохранить"
       >
         <input
           required
           className="popup__input"
           type="text"
-          placeholder="Ваше имя"
+          placeholder="имя"
           id="name-input"
           minLength="2"
           maxLength="40"
@@ -97,7 +97,7 @@ function App() {
           required
           className="popup__input"
           type="text"
-          placeholder="Немного о себе"
+          placeholder="проффесия"
           id="description-input"
           minLength="2"
           maxLength="200"
@@ -110,14 +110,14 @@ function App() {
         name="avatar"
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}
-        title="Обновить аватар"
+        title="новый аватар"
         buttonTitle="Сохранить"
       >
         <input
           required
           className="popup__input"
           type="url"
-          placeholder="Ссылка на аватар"
+          placeholder="ссылка"
           id="avatar-link"
           name="avatar"
         />
