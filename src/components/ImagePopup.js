@@ -5,18 +5,18 @@ function ImagePopup({ name, isOpen, onClose, card }) {
     <div className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>
       <div className="popup__container-open">
         <button
-          className="popup__close link-opacity"
+          className="popup__close"
           type="button"
           aria-label="закрыть"
           onClick={onClose}
         />
         <img
-          className="popup__open-photo"
+          className="popup__image"
           src={card.link}
           alt={card.name}
           onClick={onClose}
         />
-        <p className="popup__open-photo-subtitle">{card.name}</p>
+        <p className="popup__image_subtitle">{card.name}</p>
       </div>
     </div>
   )

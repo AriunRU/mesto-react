@@ -8,7 +8,7 @@ function Card({ card, handleClick, userId }) {
     <li className="element">
       {itsMyCard && (
         <button
-          className="element__delete link-opacity"
+          className="element__delete"
           type="button"
           aria-label="удалить"
         />
@@ -23,7 +23,7 @@ function Card({ card, handleClick, userId }) {
         <h2 className="element__title">{name}</h2>
         <div className="element__like_container">
           <button
-            className={`element__heart ${isLiked && 'element__heart-active'}`}
+            className={`element__heart ${isLiked && 'element__heart_active'}`}
             type="button"
             aria-label="нравится"
           />

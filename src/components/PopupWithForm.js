@@ -12,7 +12,7 @@ function PopupWithForm({ name, title, buttonTitle, isOpen, onClose, children }) 
           </button>
         </form>
         <button
-          className="popup__close link-opacity"
+          className="popup__close"
           type="button"
           aria-label="закрыть"
           onClick={onClose}

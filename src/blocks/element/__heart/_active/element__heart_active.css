@@ -1,0 +1,7 @@
+.element__heart_active {
+  background: #fff url(../../../../images/element/heartActive.svg) no-repeat
+    center;
+  object-fit: contain;
+  vertical-align: middle;
+  object-position: center;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import defaultAvatar from '../images/avatar.jpg'
+import defaultAvatar from '../images/profile/avatar.jpg'
 import { api } from '../utils/Api'
 import Card from './Card'
 
@@ -39,7 +39,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
           <div className="profile__container">
             <h1 className="profile__title">{userName}</h1>
             <button
-              className="profile__edit-button link-opacity"
+              className="profile__edit-button"
               type="button"
               aria-label="редактировать профиль"
               onClick={onEditProfile}
@@ -48,14 +48,14 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
           <p className="profile__subtitle">{userDescription}</p>
         </div>
         <button
-          className="profile__add-button link-opacity"
+          className="profile__add-button"
           type="button"
           aria-label="Добавить картинку"
           onClick={onAddPlace}
         />
       </section>
       <section className="elements" aria-label="Различные фотографии">
-        <ul className="elements__grid">
+        <ul className="elements__grid-container">
           {cards.map((card) => (
             <Card
               key={card._id}

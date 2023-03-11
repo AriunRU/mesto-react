@@ -1,15 +1,22 @@
 .header__logo {
-  background-size: cover;
-  max-width: 142px;
-  min-height: 33px;
-  margin: 0;
-  padding: 0;
+    width: 142px;
+    margin: 0 0 41px;
+    padding: 0;
 }
 
-@media screen and (max-width: 767px) {
-  .header__logo {
-    max-width: 103.74px;
-    min-height: 24.4px;
-    padding-left: 27px;
-  }
+.header__logo:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 900px) {
+    .header__logo {
+        margin: 0 0 31.6px 27px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header__logo {
+        width: 103.74px;
+        margin: 0 0 31.6px 27px;
+    }
 }
