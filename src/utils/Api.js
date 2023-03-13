@@ -87,7 +87,7 @@ class Api {
   }
 }
 
-export const api = new Api({
+const api = new Api({
   url: 'https://nomoreparties.co/v1/cohort-58',
   headers: {
     authorization: '2e4da387-210d-4156-b421-ffadc6c7daf6',
@@ -95,3 +95,4 @@ export const api = new Api({
   }
 });
 
+export default api;
