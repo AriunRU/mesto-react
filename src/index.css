@@ -16,7 +16,7 @@
 @import url(./blocks/profile/__add-button/profile__add-button.css);
 /* elements */
 @import url(./blocks/elements/elements.css);
-@import url(./blocks/elements/__grid/elements__grid-container.css);
+@import url(./blocks/elements/__grid-container/elements__grid-container.css);
 /* element */
 @import url(./blocks/element/element.css);
 @import url(./blocks/element/__title/element__title.css);
@@ -38,12 +38,12 @@
 @import url(./blocks/popup/__title/popup__title.css);
 @import url(./blocks/popup/__form/popup__form.css);
 @import url(./blocks/popup/__input/popup__input.css);
-@import url(./blocks/popup/__save/popup__save.css);
 @import url(./blocks/popup/__close/popup__close.css);
 @import url(./blocks/popup/__image/popup__image.css);
 @import url(./blocks/popup/__image/_subtitle/popup__image_subtitle.css);
 @import url(./blocks/popup/__error/popup__error.css);
 @import url(./blocks/popup/__error/_visible/popup__error_visible.css);
 @import url(./blocks/popup/__input/_type/popup__input_type-error.css);
-@import url(./blocks/popup/__save/_disabled/popup__save_disabled.css);
+@import url(./blocks/popup/__button/popup__button_save.css);
+@import url(./blocks/popup/__button/_save-disabled/popup__button_save-disabled.css);
 

@@ -5,7 +5,7 @@ function Card({ card, handleClick, userId }) {
   const isLiked = likes.some((like) => like._id === userId)
   const itsMyCard = owner._id === userId
   return (
-    <li className="element">
+    <figure className="element">
       {itsMyCard && (
         <button
           className="element__delete"
@@ -30,7 +30,7 @@ function Card({ card, handleClick, userId }) {
           <div className="element__heart-count">{likes.length}</div>
         </div>
       </div>
-    </li>
+    </figure>
   )
 }
 

@@ -7,14 +7,19 @@ import PopupWithForm from './PopupWithForm'
 
 function App() {
   const [isEditProfilePopupOpen, setOpenEditProfile] = React.useState(false)
-  const [isEditAvatarPopupOpen, setOpenEditAvatar] = React.useState(false)
   const [isAddPlacePopupOpen, setOpenAddPlace] = React.useState(false)
-  const [selectedCard, setSelectedCard] = React.useState({})
+  const [isEditAvatarPopupOpen, setOpenEditAvatar] = React.useState(false)
   const [isImageOpen, setImageOpen] = React.useState(false)
+  const [selectedCard, setSelectedCard] = React.useState({})
+
 
   function handleCardClick(card) {
     setSelectedCard(card)
     setImageOpen(true)
+  }
+
+  function handleEditProfileClick() {
+    setOpenEditProfile(true)
   }
 
   function handleAddPlaceClick() {
@@ -25,15 +30,11 @@ function App() {
     setOpenEditAvatar(true)
   }
 
-  function handleEditProfileClick() {
-    setOpenEditProfile(true)
-  }
-
   function closeAllPopups() {
-    isImageOpen && setImageOpen(false)
-    isAddPlacePopupOpen && setOpenAddPlace(false)
-    isEditAvatarPopupOpen && setOpenEditAvatar(false)
-    isEditProfilePopupOpen && setOpenEditProfile(false)
+    setImageOpen(false)
+    setOpenAddPlace(false)
+    setOpenEditAvatar(false)
+    setOpenEditProfile(false)
   }
   return (
     <div className="page">

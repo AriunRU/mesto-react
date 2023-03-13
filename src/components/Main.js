@@ -1,12 +1,12 @@
 import React from 'react'
-import defaultAvatar from '../images/profile/avatar.jpg'
+import standartAvatar from '../images/profile/avatar.jpg'
 import { api } from '../utils/api'
 import Card from './Card'
 
 function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   const [userName, setUserName] = React.useState('Жак-Ив Кото')
-  const [userDescription, setUserDescription] = React.useState('Исследователь Котанов')
-  const [userAvatar, setUserAvatar] = React.useState(defaultAvatar)
+  const [userJob, setJob] = React.useState('Исследователь Котанов')
+  const [userAvatar, setUserAvatar] = React.useState(standartAvatar)
   const [cards, setCards] = React.useState([])
   const [userId, setUserId] = React.useState('')
 
@@ -15,7 +15,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
       .then(([{ name, about, avatar, _id }, cards]) => {
         setUserAvatar(avatar)
         setUserName(name)
-        setUserDescription(about)
+        setJob(about)
         setUserId(_id)
         setCards(cards)
       })
@@ -45,7 +45,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
               onClick={onEditProfile}
             />
           </div>
-          <p className="profile__subtitle">{userDescription}</p>
+          <p className="profile__subtitle">{userJob}</p>
         </div>
         <button
           className="profile__add-button"
