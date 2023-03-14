@@ -1,4 +1,4 @@
-class Api { //При нижнем регистре не проходит тесты платформы
+class Api { //При нижнем регистре не проходит тесты платформы (Не экспортирован класс Api.)
   constructor({ url, headers }) {
     this._url = url;
     this._headers = headers;
