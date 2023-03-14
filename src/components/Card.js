@@ -27,7 +27,7 @@ function Card({ card, handleClick, userId }) {
             type="button"
             aria-label="нравится"
           />
-          <div className="element__heart-count">{likes.length}</div>
+          <div className="element__heart-counter">{likes.length}</div>
         </div>
       </div>
     </figure>
