@@ -1,7 +1,7 @@
 import React from 'react'
 import standartAvatar from '../images/profile/avatar.jpg'
 import Card from './Card'
-import api from '../utils/api'
+import api from '../utils/Api'
 
 function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   const [userName, setUserName] = React.useState('Жак-Ив Кото')
