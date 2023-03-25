@@ -1,19 +1,15 @@
 .footer__copyright {
-    font-weight: 400;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  color: #545454;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__copyright {
     font-size: 18px;
     line-height: 22px;
-    color: #545454;
-    margin: 0;
-    padding: 0;
-}
-
-.footer__copyright:hover {
-    opacity: .6;
-}
-
-@media screen and (max-width: 480px) {
-    .footer__copyright {
-        font-size: 14px;
-        line-height: 17px;
-    }
+  }
 }

@@ -1,25 +1,22 @@
-import React from 'react'
-
-function ImagePopup({ name, isOpen, onClose, card }) {
+function ImagePopup({ onClose, card }) {
   return (
-    <div className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>
+    <section className={`popup ${card && 'popup_opened'}`}>
       <div className="popup__container-open">
-        <img
-          className="popup__image"
-          src={card.link}
-          alt={card.name}
-          onClick={onClose}
-        />
+        <figure className="popup__place">
+          <img
+            src={card ? card.link : '#'}
+            className="popup__image"
+            alt={`Изображение ${card ? card.name : ''}`}/>
+          <figcaption className="popup__image_subtitle">{card ? card.name : ''}</figcaption>
+        </figure>
         <button
-          className="popup__close"
-          type="button"
-          aria-label="закрыть"
           onClick={onClose}
-        />
-        <p className="popup__image_subtitle">{card.name}</p>
+          type="button"
+          aria-label="Закрыть"
+          className="popup__close"/>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
 export default ImagePopup

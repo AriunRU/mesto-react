@@ -1,22 +1,17 @@
 .header__logo {
-    width: 142px;
-    margin: 0 0 41px;
-    padding: 0;
+  max-width: 104px;
+  width: 100%;
+  min-height: 25px;
+  margin-left: 27px;
+  background: url(../../../images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.header__logo:hover {
-    opacity: 0.6;
-}
-
-@media screen and (max-width: 900px) {
-    .header__logo {
-        margin: 0 0 31.6px 27px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .header__logo {
-        width: 103.74px;
-        margin: 0 0 31.6px 27px;
-    }
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    max-width: 142px;
+    min-height: 33px;
+    margin: 0;
+  }
 }

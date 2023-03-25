@@ -1,16 +1,19 @@
 .element__heart {
-  width: 22px;
-  height: 19px;
-  background: #fff url(../../../images/element/heart.svg) no-repeat center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  cursor: pointer;
-  border: none;
   margin: 0;
   padding: 0;
+  min-width: 22px;
+  min-height: 19px;
+  background-color: #fff;
+  background: url(../../../images/element/heart.svg);
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  box-shadow: none;
+  transition: opacity .3s linear 0s;
 }
 
 .element__heart:hover {
   opacity: .6;
+  cursor: pointer;
 }

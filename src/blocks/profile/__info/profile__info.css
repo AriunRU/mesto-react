@@ -1,15 +1,21 @@
 .profile__info {
-  margin: 0 auto 0 0;
-  display: flex;
-  max-width: 336px;
-  flex-direction: column;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  max-width: 282px;
+  width: 100%;
+  grid-template-columns: 37px auto 37px;
+  grid-template-rows: auto auto;
 }
 
-@media screen  and (max-width: 767px) {
+@media screen and (min-width: 1024px) {
   .profile__info {
-    max-width: 282px;
-    justify-content: center;
-    margin-right: 0;
-    text-align: center;
+    margin-left: 30px;
+    justify-self: start;
+    max-width: 336px;
+    grid-template-columns: auto 24px;
+    grid-template-rows: repeat(2, auto);
+    grid-column: 2;
+    grid-row: 1;
   }
 }

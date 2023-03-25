@@ -1,37 +1,56 @@
 import React from 'react'
 
-function Card({ card, handleClick, userId }) {
-  const {name, link, owner, likes} = card
-  const isLiked = likes.some((like) => like._id === userId)
-  const itsMyCard = owner._id === userId
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
+
+function Card({ card, onCardClick, onCardLike, onCardDelete, onApproval }) {
+
+  const currentUser = React.useContext(CurrentUserContext);
+
+  const itsMyCard = card.owner._id === currentUser._id;
+
+  const isLiked = card.likes.some(user => user._id === currentUser._id);
+
+  const cardLikeButtonClassName = `element__heart ${isLiked && 'element__heart_active'}`;
+
+  function handleImgClick() {
+    onCardClick(card);
+  }
+
+  function handleLikeClick() {
+    onCardLike(card);
+  }
+
+  function handleDeleteClick() {
+    onCardDelete(card);
+    onApproval();
+  }
+
   return (
     <figure className="element">
-      {itsMyCard && (
-        <button
-          className="element__delete"
-          type="button"
-          aria-label="удалить"
-        />
-      )}
-      <img
-        className="element__image"
-        src={link}
-        alt={name}
-        onClick={handleClick}
-      />
+        <img
+          onClick={handleImgClick}
+          src={card.link}
+          className="element__image"
+          alt={`Изображение ${card.name}`} />
+        {itsMyCard &&
+          <button onClick={handleDeleteClick}
+            type="button"
+            aria-label="Удалить"
+            className="element__remove" />
+        }
       <div className="element__description">
-        <h2 className="element__title">{name}</h2>
+        <h2 className="element__title">{card.name}</h2>
         <div className="element__like_container">
           <button
-            className={`element__heart ${isLiked && 'element__heart_active'}`}
+            onClick={handleLikeClick}
             type="button"
-            aria-label="нравится"
-          />
-          <div className="element__heart-counter">{likes.length}</div>
+            aria-label="Нравиться"
+            className={cardLikeButtonClassName} />
+          <span className="element__heart-counter">{card.likes.length}</span>
         </div>
       </div>
     </figure>
-  )
+  );
 }
 
 export default Card

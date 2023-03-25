@@ -1,24 +1,29 @@
 .profile__edit {
-  background: rgba(0, 0, 0, 0.8) url(../../../images/profile/profileEdit.svg) no-repeat center;
-  width: 120px;
-  height: 120px;
-  margin: 0 30px 0 0;
   position: absolute;
-  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  min-width: 120px;
+  min-height: 120px;
+  background: url(../../../images/profile/profileEdit.svg);
+  background-size: 26px 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
   border-radius: 50%;
-  border-style: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+  box-shadow: none;
+  opacity: 0;
+  transition: opacity 0.3s linear 0s;
+  z-index: 1;
 }
 
 .profile__edit:hover {
-  cursor: pointer;
-  transition: .5s;
   opacity: 1;
-}
-
-@media screen and (max-width: 767px) {
-  .profile__edit {
-    margin: 0 0 26px;
-  }
+  cursor: pointer;
+  z-index: 2;
 }

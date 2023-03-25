@@ -1,4 +1,4 @@
-class Api { //При нижнем регистре не проходит тесты платформы (Не экспортирован класс Api.)
+class Api {
   constructor({ url, headers }) {
     this._url = url;
     this._headers = headers;
@@ -50,7 +50,7 @@ class Api { //При нижнем регистре не проходит тес�
       .then(this.__checkResponse);
   }
 
-  newCard(name, link) {
+  addNewCard(name, link) {
     return fetch(this._url + '/cards', {
       method: 'POST',
       headers: this._headers,
@@ -62,24 +62,24 @@ class Api { //При нижнем регистре не проходит тес�
       .then(this.__checkResponse);
   }
 
-  removeCard(cardId) {
-    return fetch(this._url + '/cards/' + cardId, {
+  removeCard(id) {
+    return fetch(this._url + `/cards/${id}`, {
       method: 'DELETE',
       headers: this._headers,
     })
       .then(this.__checkResponse);
   }
 
-  likeCard(cardId) {
-    return fetch(this._url + '/cards/' + cardId + '/likes', {
+  likeCard(id) {
+    return fetch(this._url + `/cards/${id}/likes`, {
       method: 'PUT',
       headers: this._headers,
     })
       .then(this.__checkResponse);
   }
 
-  deleteLike(cardId) {
-    return fetch(this._url + '/cards/' + cardId + '/likes', {
+  deleteLike(id) {
+    return fetch(this._url + `/cards/${id}/likes`, {
       method: 'DELETE',
       headers: this._headers,
     })

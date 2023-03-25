@@ -1,18 +1,18 @@
 .profile {
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  max-width: 882px;
-  position: relative;
-  padding: 40px 0 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  max-width: 282px;
+  width: 100%;
+  padding-top: 42px;
 }
 
-@media screen and (max-width: 767px) {
+
+@media screen and (min-width: 1024px) {
   .profile {
-    max-width: 282px;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 42px 0 0;
+    padding-top: 40px;
+    grid-template-columns: 120px repeat(2, auto);
+    grid-template-rows: auto;
+    max-width: 880px;
   }
 }
