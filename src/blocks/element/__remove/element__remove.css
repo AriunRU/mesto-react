@@ -7,16 +7,11 @@
   min-width: 18px;
   min-height: 19px;
   background-color: #fff;
-  background: url(../../../images/element/removeButton.svg);
-  background-size: 18px 19px;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../../../images/element/removeButton.svg) center no-repeat;
   border: 0;
   box-shadow: none;
-  transition: opacity .3s linear 0s;
 }
 
 .element__remove:hover {
   opacity: .6;
-  cursor: pointer;
 }

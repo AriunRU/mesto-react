@@ -2,7 +2,7 @@ import React from 'react';
 
 import PopupWithForm from './PopupWithForm';
 
-function AddPlacePopup({isOpen, onClose, onAddPlace, isLoadingRequest}) {
+function AddPlacePopup({isOpen, onClose, onAddPlace, isRequest}) {
 
   const [name, setName] = React.useState('');
   const [link, setLink] = React.useState('');
@@ -12,15 +12,15 @@ function AddPlacePopup({isOpen, onClose, onAddPlace, isLoadingRequest}) {
     setLink('');
   }, [isOpen])
 
-  const handleNameChange = (e) => {
+  function handleNameChange(e){
     setName(e.target.value);
   }
 
-  const handleLinkChange = (e) => {
+  function handleLinkChange(e){
     setLink(e.target.value);
   }
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e){
     e.preventDefault();
 
     onAddPlace({
@@ -35,7 +35,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace, isLoadingRequest}) {
       name="add-element"
       title="Новое фото"
       buttonTitle="Создать"
-      isLoadingRequest={isLoadingRequest}
+      isRequest={isRequest}
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}>

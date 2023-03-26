@@ -1,10 +1,10 @@
 import React from 'react'
 
-function PopupWithForm({ name, title, buttonTitle, isOpen, onClose, children, onSubmit, isLoadingRequest }) {
+function PopupWithForm({ name, title, buttonTitle, isOpen, onClose, children, onSubmit, isRequest }) {
 
-  if (isLoadingRequest && name !== 'approval') {
+  if (isRequest && name !== 'DeleteCard') {
     buttonTitle = 'Сохранение...';
-  } else if (isLoadingRequest && name === 'approval') {
+  } else if (isRequest && name === 'DeleteCard') {
     buttonTitle = 'Удаление...'
   }
 
@@ -15,7 +15,7 @@ function PopupWithForm({ name, title, buttonTitle, isOpen, onClose, children, on
         <form onSubmit={onSubmit} name={name} className="popup__form">
           {children}
           <button
-            className={`popup__button_save ${name === 'approval' ? 'popup__button_save_type-approval' : null}`}
+            className={`popup__button_save ${name === 'DeleteCard' ? 'popup__button_delete-card' : null}`}
             type="submit">
             {buttonTitle}
           </button>

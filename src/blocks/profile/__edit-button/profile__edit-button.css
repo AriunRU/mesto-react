@@ -3,9 +3,7 @@
   min-width: 18px;
   min-height: 18px;
   background-color: #000;
-  background: url(../../../images/profile/editButton.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../../../images/profile/editButton.svg) center no-repeat;
   border: 1px solid #fff;
   box-shadow: none;
   grid-column: 3;

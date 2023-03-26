@@ -1,9 +1,9 @@
-.page-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.full-content {
   margin: 0 auto;
   min-width: 320px;
   max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
 }

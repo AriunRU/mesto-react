@@ -1,15 +1,15 @@
-.profile__info {
+.profile__info-container {
+  max-width: 282px;
+  width: 100%;
   display: grid;
   align-items: end;
   justify-items: center;
-  max-width: 282px;
-  width: 100%;
   grid-template-columns: 37px auto 37px;
   grid-template-rows: auto auto;
 }
 
 @media screen and (min-width: 1024px) {
-  .profile__info {
+  .profile__info-container {
     margin-left: 30px;
     justify-self: start;
     max-width: 336px;

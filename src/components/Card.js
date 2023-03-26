@@ -2,14 +2,10 @@ import React from 'react'
 
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
-function Card({ card, onCardClick, onCardLike, onCardDelete, onApproval }) {
-
+function Card({ card, onCardClick, onCardLike, onCardDelete, onDeleteCard }) {
   const currentUser = React.useContext(CurrentUserContext);
-
   const itsMyCard = card.owner._id === currentUser._id;
-
   const isLiked = card.likes.some(user => user._id === currentUser._id);
-
   const cardLikeButtonClassName = `element__heart ${isLiked && 'element__heart_active'}`;
 
   function handleImgClick() {
@@ -22,7 +18,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete, onApproval }) {
 
   function handleDeleteClick() {
     onCardDelete(card);
-    onApproval();
+    onDeleteCard();
   }
 
   return (

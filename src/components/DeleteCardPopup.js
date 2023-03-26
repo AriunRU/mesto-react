@@ -2,7 +2,7 @@ import React from 'react';
 
 import PopupWithForm from './PopupWithForm';
 
-function ApprovalPopup({isOpen, onClose, isLoadingRequest, onDeleteCard, card}) {
+function DeleteCardPopup({isOpen, onClose, isRequest, onDeleteCard, card}) {
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -11,15 +11,15 @@ function ApprovalPopup({isOpen, onClose, isLoadingRequest, onDeleteCard, card}) 
 
   return (
     <PopupWithForm
-      name="approval"
+      name="deleteCard"
       title="Вы уверены?"
       buttonTitle="Да"
       isOpen={isOpen}
       onClose={onClose}
-      isLoadingRequest={isLoadingRequest}
+      isRequest={isRequest}
       onSubmit={handleSubmit}>
     </PopupWithForm>
   );
 }
 
-export default ApprovalPopup;
+export default DeleteCardPopup;

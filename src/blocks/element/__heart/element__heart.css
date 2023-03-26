@@ -4,16 +4,11 @@
   min-width: 22px;
   min-height: 19px;
   background-color: #fff;
-  background: url(../../../images/element/heart.svg);
-  background-size: 20px 20px;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../../../images/element/heart.svg) center no-repeat;
   border: 0;
   box-shadow: none;
-  transition: opacity .3s linear 0s;
 }
 
 .element__heart:hover {
   opacity: .6;
-  cursor: pointer;
 }

@@ -26,7 +26,7 @@
 }
 
 .profile__avatar-container:hover::before {
-  opacity: .5;
+  opacity: .6;
 }
 
 @media screen and (min-width: 1024px) {

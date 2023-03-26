@@ -21,7 +21,7 @@ function Main(props) {
               type="button"
             ></button>
           </div>
-          <div className="profile__info">
+          <div className="profile__info-container">
             <h1 className="profile__title">{currentUser.name}</h1>
             <button
               onClick={props.onEditProfile}
@@ -43,7 +43,7 @@ function Main(props) {
               card={card}
               key={card._id}
               onCardClick={props.onCardClick}
-              onApproval={props.onApproval}
+              onDeleteCard={props.onDeleteCard}
               onCardLike={props.onCardLike}
               onCardDelete={props.onCardDelete} />
           );

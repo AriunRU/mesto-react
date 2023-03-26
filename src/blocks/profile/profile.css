@@ -1,10 +1,10 @@
 .profile {
-  display: grid;
-  align-items: center;
-  justify-items: center;
   max-width: 282px;
   width: 100%;
   padding-top: 42px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 

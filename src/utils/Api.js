@@ -85,6 +85,14 @@ class Api {
     })
       .then(this.__checkResponse);
   }
+
+  changeLikeCardStatus(id, isLiked) {
+    if (isLiked) {
+      return this.likeCard(id);
+    } else {
+      return this.deleteLike(id);
+    }
+  }
 }
 
 const api = new Api({

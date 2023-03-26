@@ -10,10 +10,7 @@
   padding: 0;
   min-width: 120px;
   min-height: 120px;
-  background: url(../../../images/profile/profileEdit.svg);
-  background-size: 26px 26px;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../../../images/profile/profileEdit.svg) center no-repeat;
   border: none;
   border-radius: 50%;
   box-shadow: none;
