@@ -55,6 +55,26 @@ function App() {
     setSelectedCard(null);
   }
 
+  const isOpen =
+  isEditAvatarPopupOpen ||
+  isEditProfilePopupOpen ||
+  isAddPlacePopupOpen ||
+  isDeleteCardPopupOpen
+
+  React.useEffect(() => {
+    function closeByEscape(evt) {
+      if(evt.key === 'Escape') {
+        closeAllPopups();
+      }
+    }
+    if(isOpen) {
+      document.addEventListener('keyup', closeByEscape);
+      return () => {
+        document.removeEventListener('keyup', closeByEscape);
+      }
+    }
+  }, [isOpen])
+
   React.useEffect(() => {
     Promise.all([api.getUsersApi(), api.getInitialCards()])
       .then(data => {
@@ -105,13 +125,15 @@ function App() {
       .finally(() => setIsLoading(false))
   }
 
-  function handleUpdateAvatar({ avatar }) {
+  function handleUpdateAvatar(newAvatarData) {
     setIsLoading(true);
 
     api
-      .avatarNewUser(avatar)
+      .avatarNewUser(newAvatarData)
       .then(() => {
-        setCurrentUser({ ...currentUser, apiAvatar: avatar.apiAvatar });
+        setCurrentUser({
+          ...currentUser, avatar: newAvatarData.avatar
+        });
         closeAllPopups();
       })
       .catch(err => console.log(err))
@@ -166,8 +188,7 @@ function App() {
             isRequest={loadingPopupRequest}
             onDeleteCard={handleCardDelete}
             isOpen={isDeleteCardPopupOpen}
-            onClose={closeAllPopups}>
-          </DeleteCardPopup>
+            onClose={closeAllPopups} />
           <ImagePopup
             card={selectedCard}
             onClose={closeAllPopups} />

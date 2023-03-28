@@ -17,8 +17,8 @@ function DeleteCardPopup({isOpen, onClose, isRequest, onDeleteCard, card}) {
       isOpen={isOpen}
       onClose={onClose}
       isRequest={isRequest}
-      onSubmit={handleSubmit}>
-    </PopupWithForm>
+      onSubmit={handleSubmit}
+      />
   );
 }
 
