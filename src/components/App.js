@@ -229,7 +229,7 @@ function App() {
 
   function handleRegister(password, email) {
     Auth.register(password, email)
-      .then((res) => {
+      .then(() => {
         handleSignUpStatus();
         navigate("/sign-in", { replace: true });
       })
