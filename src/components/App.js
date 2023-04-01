@@ -252,8 +252,8 @@ function App() {
           navigate("/", { replace: true });
         }
       })
-      .catch((error) => {
-        console.log(`Ошибка: ${error}`);
+      .catch((err) => {
+        console.log(err);
         setIsSignUp(false);
       });
   }
