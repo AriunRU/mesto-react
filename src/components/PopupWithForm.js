@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PopupWithForm({ name, title, buttonTitle, isOpen, onClose, children, onSubmit, isRequest }) {
+function PopupWithForm({name, isOpen, onClick, onClose, title, onSubmit, children, buttonTitle, isRequest}) {
 
   if (isRequest && name !== 'DeleteCard') {
     buttonTitle = 'Сохранение...';
@@ -9,26 +9,26 @@ function PopupWithForm({ name, title, buttonTitle, isOpen, onClose, children, on
   }
 
   return (
-    <section className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>
+    <div
+      className={`popup popup_type_${name} ${isOpen ? `popup_opened` : ""}`}
+      onClick={onClick}
+    >
       <div className="popup__container">
-      <h2 className="popup__title">{title}</h2>
-        <form onSubmit={onSubmit} name={name} className="popup__form">
+        <button
+          className="popup__close"
+          onClick={onClose}
+          type="button"
+        ></button>
+        <h2 className="popup__title">{title}</h2>
+        <form className="popup__form" onSubmit={onSubmit} name={name}>
           {children}
-          <button
-            className={`popup__button_save ${name === 'DeleteCard' ? 'popup__button_delete-card' : null}`}
-            type="submit">
+          <button className={`popup__button_save ${name === 'DeleteCard' ? 'popup__button_delete-card' : null}`} type="submit">
             {buttonTitle}
           </button>
         </form>
-        <button
-          className="popup__close"
-          type="button"
-          aria-label="закрыть"
-          onClick={onClose}
-        />
       </div>
-    </section>
-  )
+    </div>
+  );
 }
 
 export default PopupWithForm

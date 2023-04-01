@@ -12,12 +12,10 @@
   border: 2px solid #fff;
   border-radius: 2px;
   box-shadow: none;
-  transition: opacity .3s linear 0s;;
 }
 
 .profile__add-button:hover {
   opacity: .6;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
