@@ -45,7 +45,7 @@ class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: dataAvatar,
+        avatar: dataAvatar.avatar,
       })
     });
   }

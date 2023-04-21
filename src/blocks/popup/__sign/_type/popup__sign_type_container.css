@@ -1,9 +1,0 @@
-.popup__sign_type_container {
-  position: relative;
-  width: 430px;
-  height: 330px;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
-}
